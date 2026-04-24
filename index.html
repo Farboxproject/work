@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasa Nusantara • Full Menu Premium</title>
+  <meta name="description" content="Website menu makanan full kategori dengan animasi smooth, tampilan HD, dan pengalaman modern." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+
+  <header class="hero">
+    <nav class="container nav glass">
+      <strong class="logo">🍜 Rasa Nusantara</strong>
+      <div class="nav-actions">
+        <button class="btn ghost" id="btnMenu">Lihat Menu</button>
+        <button class="btn" id="btnRandomTop">Rekomendasi Acak</button>
+      </div>
+    </nav>
+
+    <section class="container hero-content reveal">
+      <p class="badge-text">FULL HD • SMOOTH • FULL ANIMASI • FULL KATEGORI</p>
+      <h1>Website Full Menu Makanan Modern</h1>
+      <p class="subtitle">
+        Semua kategori tersedia: Nusantara, Asian, Western, Seafood, Healthy,
+        Snack, Dessert, Minuman, dan Paket Keluarga. Navigasi cepat, desain premium,
+        serta animasi halus untuk pengalaman terbaik.
+      </p>
+      <div class="hero-actions">
+        <button class="btn" id="btnExplore">Eksplor Sekarang</button>
+        <button class="btn ghost" id="btnHighlight">Tampilkan Menu Terbaik</button>
+      </div>
+      <div class="hero-stats">
+        <article><h3 id="statItems">0</h3><p>Total Menu</p></article>
+        <article><h3 id="statCategory">0</h3><p>Total Kategori</p></article>
+        <article><h3>4.8+</h3><p>Rating Rata-rata</p></article>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section class="controls glass reveal" id="menuSection">
+      <div class="search-block">
+        <input type="text" id="searchInput" placeholder="Cari menu, kategori, atau deskripsi..." />
+      </div>
+      <div class="toolbar">
+        <div class="filter-row" id="categoryFilters"></div>
+        <div class="sort-row">
+          <label for="sortSelect">Urutkan:</label>
+          <select id="sortSelect">
+            <option value="popular">Paling Populer</option>
+            <option value="priceAsc">Harga Termurah</option>
+            <option value="priceDesc">Harga Termahal</option>
+            <option value="ratingDesc">Rating Tertinggi</option>
+            <option value="calorieAsc">Kalori Terendah</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured reveal" id="featuredBox" hidden>
+      <h2>🔥 Highlight Menu Terbaik Hari Ini</h2>
+      <p id="featuredText"></p>
+    </section>
+
+    <section id="menuGrid" class="menu-grid" aria-live="polite"></section>
+  </main>
+
+  <template id="menuTemplate">
+    <article class="menu-card reveal">
+      <div class="media-wrap">
+        <img class="menu-image" alt="" loading="lazy" />
+        <span class="chip category-chip"></span>
+      </div>
+      <div class="menu-content">
+        <div class="menu-head">
+          <h3></h3>
+          <p class="price"></p>
+        </div>
+        <p class="desc"></p>
+        <div class="meta-row">
+          <span class="rating"></span>
+          <span class="calories"></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <footer class="container footer">
+    <p>© 2026 Rasa Nusantara — dibuat untuk kebutuhan website full menu makanan premium.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
